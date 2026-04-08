@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Gallery - Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #00000000;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgb(138, 13, 117);
+            border-bottom: 1px solid #ddd;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #070108;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #c7b406;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #eeff00;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url(IMG\ \(2\).jpeg) ;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: #ddd;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: white;
+            color: black;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #c7b406;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 5rem 2rem;
+            background: #f9f9f9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .feature-card p {
+            color: #666;
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .btn-dark {
+            background: black;
+            color: white;
+        }
+
+        .btn-dark:hover {
+            background: #c7b406;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Rust Bucket Productions</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="gallery.html">Collection</a></li>
+                <li><a href="about.html">Information</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>RUST BUCKET PRODUCIONS</h1>
+            <p>A showcase of my arts & crafts, from traditional art to digital, even cosplays!</p>
+            <a href="gallery.html" class="btn">View Collection</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>What We Offer</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Traditional Art</h3>
+                    <p>Hand drawn art made by me over the years of practicing arts.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Cosplays</h3>
+                    <p>My costumes that i have made to use for events all over Baguio City!</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Digital Art</h3>
+                    <p>Still a growing collection as i only started making digital art very recently.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Explore?</h2>
+            <p>Dive into our collection and discover your next favorite piece</p>
+            <a href="gallery.html" class="btn btn-dark">Browse Gallery</a>
+        </div>
+    </section>
+</body>
+</html>
